@@ -39,9 +39,11 @@ section {
 }
 
 .header section {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
@@ -59,10 +61,11 @@ section {
     font-size: 2rem;
 }
 
-.icons img{
+.icons img {
     margin: 1rem;
     cursor: pointer;
 }
+
 .icons img:hover {
     width: 40px;
     height: 40px;
@@ -78,6 +81,7 @@ section {
     display: inline-block;
     border-radius: 5px;
 }
+
 .btn:hover {
     border-radius: 15px;
     opacity: 0.5;
@@ -93,12 +97,14 @@ section {
 }
 
 .content {
-    max-width: 70rem;    
+    max-width: 70rem;
 }
+
 .content h3 {
     color: #fff;
     font-size: 6rem;
 }
+
 .content p {
     color: #fff;
     font-size: 2rem;
@@ -115,11 +121,12 @@ section {
 
 .title {
     font-size: 5rem;
-    color: var(--main-color);    
+    color: var(--main-color);
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 4rem;
 }
+
 .title span {
     color: #fff;
     text-transform: uppercase;
@@ -131,13 +138,16 @@ section {
     background-color: var(--black);
     gap: 1.5rem;
 }
+
 .about .row .content {
     padding: 2rem;
 }
+
 .about .row .content h3 {
     font-size: 3rem;
     color: #fff;
 }
+
 .about .row .content p {
     font-size: 1.6rem;
     color: #fff;
@@ -145,17 +155,20 @@ section {
     line-height: 1.8;
 }
 
+
 .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
 }
+
 .menu .box-container .box {
     text-align: center;
     border: var(--border);
     padding: 5rem;
     cursor: pointer;
 }
+
 .menu .box-container .box:hover {
     background-color: #fff;
     opacity: 0.4;
@@ -164,16 +177,19 @@ section {
 .menu .box-container .box img {
     height: 10rem;
 }
+
 .menu .box-container .box h3 {
     color: #fff;
     font-size: 2rem;
     padding: 1rem 0;
 }
+
 .menu .box-container .box .price {
     color: #fff;
     font-size: 2.5rem;
     padding: 0.5rem 0;
 }
+
 .menu .box-container .box .price span {
     font-size: 1.5rem;
     text-decoration: line-through;
@@ -189,6 +205,7 @@ section {
     text-align: center;
     padding: 3rem;
 }
+
 .review .box-container .box p {
     font-size: 1.5rem;
     color: #fff;
@@ -196,11 +213,13 @@ section {
     line-height: 1.8;
     font-weight: lighter;
 }
+
 .review .box-container .box .user {
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
 }
+
 .review .box-container .box h3 {
     color: #fff;
     font-size: 2rem;
@@ -212,9 +231,11 @@ section {
     align-items: center;
     flex-direction: column;
 }
+
 .footer {
     text-align: center;
 }
+
 .footer .share {
     padding: 1rem;
 }
@@ -225,7 +246,112 @@ section {
     border-radius: 50%;
     padding: 1rem;
 }
+
 .footer .share img:hover {
     background: var(--main-color);
     opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+    section {
+        padding: 10px;
+        margin: 0px;
+    }
+
+    section .logo img {
+        display: none;
+    }
+
+    section .icons {
+        display: none;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+    }
+
+    .icons img {
+        margin: 0.5rem;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .content h3 {
+        font-size: 4rem;
+    }
+
+    .content p {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        overflow: hidden;
+    }
+
+    .menu .box-container {
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: row;        
+        overflow-y: auto;
+        
+    }
+
+    .box-container .btn {
+        padding: none;
+    }
+
+    .about .row {
+        flex-direction: column;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .about .content img {
+        width: 50vw;
+    }
+
+    .about .row .content h3 {
+        font-size: 2rem;
+    }
+
+    .about .row .content p {
+        font-size: 1.2rem;
+    }
+
+    .box-container .box {
+        padding: 3rem;
+    }
+
+    .box-container .box h3 {
+        font-size: 1.5rem;
+    }
+
+    .box-container .box .price {
+        font-size: 2rem;
+    }
+
+
+    .review .box-container .box {
+        padding: 2rem;
+    }
+
+    .review .box-container .box p {
+        font-size: 1.2rem;
+    }
+
+    .review .box-container .box h3 {
+        font-size: 1.5rem;
+    }
+
+    .maps {
+        width: 380px;
+        height: 280px;
+    }
 }
