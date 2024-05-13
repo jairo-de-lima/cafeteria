@@ -61,6 +61,17 @@ section {
     font-size: 2rem;
 }
 
+.escondido {
+    display: none;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    height: 25px;
+}
+
 .icons img {
     margin: 1rem;
     cursor: pointer;
@@ -200,6 +211,29 @@ section {
     color: var(--black);
 }
 
+
+
+.item-carrinho {
+    border: var(--border);
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.item-carrinho img {
+    margin-right: 10px;
+    max-width: 100px;
+    max-height: 100px;
+}
+#total {
+    color: #ccc;
+    font-size: 1.5rem;
+}
+
+
+
 .review .box-container .box {
     border: var(--border);
     text-align: center;
@@ -298,9 +332,9 @@ section {
     .menu .box-container {
         display: flex;
         gap: 1.5rem;
-        flex-direction: row;        
+        flex-direction: row;
         overflow-y: auto;
-        
+
     }
 
     .box-container .btn {

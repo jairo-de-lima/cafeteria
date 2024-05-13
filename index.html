@@ -24,9 +24,12 @@
                 <a href="#review">Avaliações</a>
                 <a href="#address">Endereço</a>
             </nav>
+            <input type="text" id="Input" class="escondido">
             <div class="icons">
+
                 <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/search--v1.png"
-                    alt="search--v1" />
+                    alt="search--v1" onclick="mostrarInput()" />
+
                 <img width="30" height="30" src="https://img.icons8.com/material-sharp/30/ffffff/shopping-cart.png"
                     alt="shopping-cart" />
             </div>
@@ -42,7 +45,7 @@
                     cafés especiais, cuidadosamente selecionados de fazendas ao redor do mundo. Saboreie cada gole, cada
                     momento de pausa, enquanto nossos baristas especializados preparam suas criações artesanais com
                     maestria, transformando cada xícara em uma obra-prima do sabor.</p>
-                <a href="#" class="btn">Pegue o seu agora</a>
+                <a href="#menu" class="btn">Pegue o seu agora</a>
             </div>
 
 
@@ -66,7 +69,6 @@
                     simplesmente um momento de contemplação. Estamos aqui para ser mais do que uma cafeteria - somos um
                     destino onde as conexões são fortalecidas, as ideias são compartilhadas e os momentos preciosos são
                     celebrados.</p>
-                <a href="#" class="btn">Saiba mais</a>
             </div>
         </div>
     </section>
@@ -76,56 +78,64 @@
         <div class="box-container">
 
             <div class="box">
-                <img src="./img/menu-1.png" alt="iten1">
+                <img src="./img/menu-1.png" alt="Expresso">
                 <h3> Expresso</h3>
                 <div class="price">R$ 7,99 <span>R$ 9,99</span></div>
-                <a href="#" class="btn">Adicione ao Carrinho</a>
+                <a class="btn" onclick="adicionarItem('Expresso', '7.99', './img/menu-1.png')">Adicione ao Carrinho</a>
             </div>
 
 
             <div class="box">
-                <img src="./img/menu-2.png" alt="iten1">
+                <img src="./img/menu-2.png" alt="Macchiato">
                 <h3>Macchiato</h3>
                 <div class="price">R$ 9,99 <span>R$ 12,99</span></div>
-                <a href="#" class="btn">Adicione ao Carrinho</a>
+                <a class="btn" onclick="adicionarItem('Macchiato', '9.99', './img/menu-2.png')">Adicione ao Carrinho</a>
             </div>
 
 
             <div class="box">
-                <img src="./img/menu-3.png" alt="iten1">
+                <img src="./img/menu-3.png" alt="Cappuccino">
                 <h3>Cappuccino</h3>
                 <div class="price">R$ 9,99 <span>R$ 12,99</span></div>
-                <a href="#" class="btn">Adicione ao Carrinho</a>
+                <a class="btn" onclick="adicionarItem('Cappuccino', '9.99', './img/menu-3.png')">Adicione ao
+                    Carrinho</a>
             </div>
 
 
             <div class="box">
-                <img src="./img/menu-4.png" alt="iten1">
+                <img src="./img/menu-4.png" alt="Cold Brew">
                 <h3>Cold Brew</h3>
                 <div class="price">R$ 13,99 <span>R$ 15,99</span></div>
-                <a href="#" class="btn">Adicione ao Carrinho</a>
+                <a class="btn" onclick="adicionarItem('Cold Brew', '13.99', './img/menu-4.png')">Adicione ao
+                    Carrinho</a>
             </div>
 
 
             <div class="box">
-                <img src="./img/menu-5.png" alt="iten1">
+                <img src="./img/menu-5.png" alt="Chai Latte">
                 <h3>Chai Latte</h3>
                 <div class="price">R$ 10,99 <span>R$ 14,99</span></div>
-                <a href="#" class="btn">Adicione ao Carrinho</a>
+                <a class="btn" onclick="adicionarItem('Chai Latte', '10.99', './img/menu-5.png')">Adicione ao
+                    Carrinho</a>
             </div>
 
 
             <div class="box">
-                <img src="./img/menu-6.png" alt="iten1">
+                <img src="./img/menu-6.png" alt="Latte">
                 <h3>Latte</h3>
                 <div class="price">R$ 10,99 <span>R$ 14,99</span></div>
-                <a href="#" class="btn">Adicione ao Carrinho</a>
+                <a class="btn" onclick="adicionarItem('Latte', '10.99', './img/menu-6.png')">Adicione ao Carrinho</a>
             </div>
-
-
-
-
         </div>
+
+        <h2 class="title">Carrinho de <span>Compras</span></h2>
+        <div id="carrinho" class="box-container" onclick="removerItem(event)">
+        </div>
+        <p id="total">Total: R$ 0,00</p>
+        <a class="btn" href="https://whatsa.me/5511940107909/?t=Ola,%20gostei%20do%20projeto%20cafeteria!" target="_blank">
+            solicitar Pedido
+
+        </a>
 
     </section>
     <section class="review" id="review">
@@ -208,11 +218,15 @@
     </section>
     <section class="footer">
         <div class="share">
-            <img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/facebook-new.png"
-                alt="facebook-new" />
-            <img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/instagram-new--v1.png"
-                alt="instagram-new--v1" />
-            <img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/twitter--v1.png" alt="twitter--v1" />
+            <a href="https://www.facebook.com/jairodeL.santos" target="_blank">
+                <img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/facebook-new.png"
+                    alt="facebook-new" /></a>
+            <a href="https://whatsa.me/5511940107909/?t=Ola,%20gostei%20do%20projeto%20cafeteria!" target="_blank">
+                <img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/whatsapp--v1.png"
+                    alt="whatsapp--v1" /></a>
+            <a href="https://github.com/jairo-de-lima" target="_blank">
+                <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/ffffff/github.png"
+                    alt="github" /></a>
         </div>
     </section>
 
