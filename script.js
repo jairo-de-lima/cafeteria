@@ -10,7 +10,6 @@ function mostrarInput() {
 let totalCarrinho = 0;
 
 function adicionarItem(nomeProduto, precoProduto, imagemProduto) {
-  // Criar um novo item de carrinho
   let novoItem = document.createElement("div");
   novoItem.classList.add("box");
   
